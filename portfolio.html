@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+    :root {
+      --primary-color: #a855f7;
+      --primary-color-dark: #9333ea;
+      --secondary-color: #9333ea;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --extra-light: #faf5ff;
+      --max-width: 1200px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--extra-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      z-index: 99;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav__content {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      transition: 0.3s;
+    }
+
+    nav .logo a:hover {
+      color: var(--primary-color-dark);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-top-color: var(--secondary-color);
+      border-bottom-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    /* Portfolio Section */
+    .section {
+      padding: 6rem 1rem 4rem 1rem;
+      max-width: var(--max-width);
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    /* Skills Section */
+    .skills__section {
+      margin-top: 2rem;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .skills__section:hover {
+      transform: translateY(-5px);
+    }
+
+    .skills__heading {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--primary-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Skills Grid */
+    .skills__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .skill__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .skills__image {
+      width: 100%;
+      max-width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 3px solid var(--primary-color);
+      transition: transform 0.3s ease;
+    }
+
+    .skills__image:hover {
+      transform: scale(1.05);
+      border-color: var(--primary-color-dark);
+    }
+
+    .skill__title {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav__content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .skills__content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .skills__image {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav__content">
+    <div class="logo"><a href="index.html">Shariza</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Portfolio Section -->
+<section class="section">
+  <h1>Portfolio</h1>
+  <p>Here are some of my projects...</p>
+  
+  <!-- Skills Section -->
+  <div class="skills__section">
+    <div class="skills__content">
+      <div class="skill__item">
+        <img src="https://i.pinimg.com/736x/e0/00/13/e000132620d538ee79268871adda0702.jpg" alt="Skill 1" class="skills__image" />
+        <div class="skill__title">Payroll Expert</div>
+      </div>
+      <div class="skill__item">
+        <img src="https://i.pinimg.com/736x/b6/87/91/b687911f920ebbea29a39be613ac4ca0.jpg" alt="Skill 2" class="skills__image" />
+        <div class="skill__title">Tax Adviser</div>
+      </div>
+      <div class="skill__item">
+        <img src="https://i.pinimg.com/736x/d0/b0/d2/d0b0d20e8bd97f9dabf997698fd8da98.jpg" alt="Skill 3" class="skills__image" />
+        <div class="skill__title">Accounting</div>
+      </div>
+      <div class="skill__item">
+        <img src="https://i.pinimg.com/736x/5f/40/6e/5f406eedb1e4b559a7f69085f166c132.jpg" alt="Skill 4" class="skills__image" />
+        <div class="skill__title">Contact Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Shariza Asamuddin</title>
+
+  <!-- Import Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #a855f7;
+      --primary-color-dark: #9333ea;
+      --secondary-color: #9333ea;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --extra-light: #faf5ff;
+      --max-width: 1200px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* General Styles */
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--extra-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #ffffff;
+      padding: 1rem 1.5rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    .logo a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      transition: color 0.3s ease;
+    }
+
+    .logo a:hover {
+      color: var(--primary-color-dark);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      transition: 0.3s;
+      border: 2px solid transparent;
+      display: inline-block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-top-color: var(--secondary-color);
+      border-bottom-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    /* Resume Section */
+    .resume-section {
+      padding: 6rem 1rem 4rem 1rem;
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    .resume-container {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .resume-container:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Headers */
+    .resume-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .resume-contact {
+      margin-bottom: 2rem;
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+
+    .resume-heading {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--primary-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Resume Items */
+    .resume-item h3 {
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .resume-item p {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .resume-item ul {
+      padding-left: 20px;
+      color: var(--text-light);
+    }
+
+    .resume-item ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Skills */
+    .resume-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .resume-skills span {
+      display: inline-block;
+      background-color: #f3e8ff;
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .resume-skills span:hover {
+      background-color: var(--primary-color-dark);
+      color: #ffffff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .resume-container {
+        padding: 1.5rem;
+      }
+
+      .resume-skills {
+        justify-content: center;
+      }
+
+      .resume-skills span {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav__content">
+    <div class="logo"><a href="index.html">Shariza</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" >About</a></li>
+      <li><a href="resume.html" class="active"> Resume</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Resume Section -->
+<section class="resume-section">
+  <div class="resume-container">
+    <!-- Header -->
+    <div class="resume-header">
+      <h1 class="resume-title">Shariza Asamuddin</h1>
+      <p class="resume-contact">
+        📧 sharilenedeana@gmail.com | 📞 +639452709390 | 📍 Holy Name, Mabolo, Cebu City, Philippines
+      </p>
+    </div>
+
+    <!-- Summary -->
+    <div class="resume-block">
+      <h2 class="resume-heading">Summary</h2>
+      <p>
+        Productive employee with a proven track record of successful project management and producing quality outcomes through leadership and team motivation. Works with clients to determine requirements and provide excellent service.
+      </p>
+    </div>
+
+    <!-- Education -->
+    <div class="resume-block">
+      <h2 class="resume-heading">Education</h2>
+      <div class="resume-item">
+        <h3>Western Mindanao State University, Zamboanga, Philippines</h3>
+        <p>Bachelor of Science in Nutrition and Dietetics (06/2009 - 03/2013)</p>
+        <ul>
+          <li>Graduate of Bachelor of Science in Nutrition and Dietetics</li>
+          <li>Coursework in foods and beverages, public health and nutrition, and providing healthcare in the hospital</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="resume-block">
+      <h2 class="resume-heading">Experience</h2>
+      <div class="resume-item">
+        <h3>Eperformax Cebu, Cebu, Philippines</h3>
+        <p>Customer Service Agent (04/2016 - 04/2017)</p>
+        <ul>
+          <li>Addressed technical difficulties by quickly identifying and troubleshooting customer issues to achieve timely first-time resolution</li>
+          <li>Consistently went the extra mile to achieve customer satisfaction</li>
+          <li>Assisted customers with important purchasing choices, identifying needs and employing product expertise to make appropriate suggestions</li>
+          <li>Provided friendly, attentive service by promptly responding to customer inquiries and processing order requests</li>
+          <li>Handled complaints calmly and professionally, providing appropriate solutions to promote continued customer satisfaction</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="resume-block">
+      <h2 class="resume-heading">Skills</h2>
+      <div class="resume-skills">
+        <span>Productive expertise</span>
+        <span>Live chat operation</span>
+        <span>After-sales support</span>
+        <span>Customer account management</span>
+        <span>Salesforce CRM</span>
+        <span>Excellent communication skills</span>
+        <span>Handling objections</span>
+        <span>Polite phone manner</span>
+        <span>Results-driven mindset</span>
+        <span>Multidisciplinary teamwork</span>
+        <span>Typing speed: [Include WPM]</span>
+        <span>Technical troubleshooting and issue resolution</span>
+        <span>Decision-making and problem-solving</span>
+        <span>Bank reconciliation for QuickBooks</span>
+        <span>Payroll advising</span>
+        <span>Bookkeeping and financial reporting</span>
+        <span>Customer service excellence</span>
+        <span>Adaptability and flexibility</span>
+        <span>Time management and multitasking</span>
+        <span>Strong interpersonal skills</span>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="resume-block">
+      <h2 class="resume-heading">Languages</h2>
+      <p>English: C2 (Proficient)</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+    :root {
+      --primary-color: #a855f7;
+      --primary-color-dark: #9333ea;
+      --secondary-color: #9333ea;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --extra-light: #faf5ff;
+      --max-width: 1200px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--extra-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      z-index: 99;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav__content {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      transition: color 0.3s;
+    }
+
+    nav .logo a:hover {
+      color: var(--primary-color-dark);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      transition: color 0.3s;
+      border: 2px solid transparent;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-top-color: var(--secondary-color);
+      border-bottom-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    /* Contact Section */
+    .section {
+      padding: 6rem 1rem 4rem 1rem;
+      max-width: var(--max-width);
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    .contact__info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact__card {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .contact__card:hover {
+      transform: translateY(-5px);
+      border: 2px solid var(--primary-color);
+    }
+
+    .contact__icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .contact__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact__details {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    .contact__details a {
+      color: var(--primary-color);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .contact__details a:hover {
+      color: var(--primary-color-dark);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact__info {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      .contact__card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav__content">
+    <div class="logo"><a href="index.html">Shariza</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section class="section">
+  <h1>Contact Me</h1>
+  <p>You can reach me at the following contact details:</p>
+
+  <div class="contact__info">
+    <!-- Phone Card -->
+    <div class="contact__card">
+      <div class="contact__icon">📞</div>
+      <div class="contact__title">Phone</div>
+      <div class="contact__details">
+        <a href="tel:+639452709390">+63 945 270 9390</a>
+      </div>
+    </div>
+
+    <!-- Email Card -->
+    <div class="contact__card">
+      <div class="contact__icon">📧</div>
+      <div class="contact__title">Email</div>
+      <div class="contact__details">
+        <a href="mailto:sharilenedeana@gmail.com">sharilenedeana@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Instagram Card -->
+    <div class="contact__card">
+      <div class="contact__icon">📸</div>
+      <div class="contact__title">Instagram</div>
+      <div class="contact__details">
+        <a href="https://www.instagram.com/_sharizaaaa/" target="_blank">
+          instagram.com/_sharizaaaa
+        </a>
+      </div>
+    </div>
+
+    <!-- Location Card -->
+    <div class="contact__card">
+      <div class="contact__icon">📍</div>
+      <div class="contact__title">Location</div>
+      <div class="contact__details">
+        <a href="https://www.google.com/maps?q=Holy+Name,+Mabolo,+Cebu+City,+Philippines" target="_blank">
+          Holy Name, Mabolo, Cebu City, Philippines
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
